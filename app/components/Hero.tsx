@@ -1,6 +1,6 @@
 export default function Hero() {
   return (
-    <div className="hero container m-auto relative flex items-center">
+    <div className="hero container m-auto relative flex items-center mb-72">
       <div className="flex-1/4 ml-5 mr-5">
         <h1 className="hero__title text-5xl font-bold mb-5">
           Find, book, rent a car—quick and super easy!
