@@ -38,7 +38,6 @@ export default function CarList() {
 
     fetchData();
   }, []);
-  // console.log(data)
 
   return (
     <div className="flex flex-wrap container m-auto">
