@@ -19,6 +19,7 @@ interface car {
 
 export default function CarList() {
   const [data, setData] = useState<car[]>([]);
+  const [searchData,setSearchData]= useState<string>('')
 
   useEffect(() => {
     async function fetchData() {
@@ -38,9 +39,10 @@ export default function CarList() {
     fetchData();
   }, []);
 
+  
   return (
     <div className="container m-auto">
-      <SearchBox />
+      <SearchBox onSearch={setSearchData}/>
       <div className="flex flex-wrap ">
         {data.map((item) => (
           <CarCard key={item.id} car={item} />
