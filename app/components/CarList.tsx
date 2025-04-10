@@ -2,20 +2,19 @@
 
 import { useState, useEffect } from "react";
 import axios from "axios";
-import CarCard from "./CarCard"
-
+import CarCard from "./CarCard";
+import SearchBox from "./SearchBox";
 
 interface car {
-  id:string,
-  make: string,
-  model: string,
-  trancy: string,
-  vclass: string,
-  year: string,
-  fueltype:string,
-  drive:string,
-  basemodel:string
-
+  id: string;
+  make: string;
+  model: string;
+  trancy: string;
+  vclass: string;
+  year: string;
+  fueltype: string;
+  drive: string;
+  basemodel: string;
 }
 
 export default function CarList() {
@@ -40,11 +39,13 @@ export default function CarList() {
   }, []);
 
   return (
-    <div className="flex flex-wrap container m-auto">
-        
-      {data.map((item) => (
-        <CarCard key={item.id} car={item} />
-      ))}
+    <div className="container m-auto">
+      <SearchBox />
+      <div className="flex flex-wrap ">
+        {data.map((item) => (
+          <CarCard key={item.id} car={item} />
+        ))}
+      </div>
     </div>
   );
 }
