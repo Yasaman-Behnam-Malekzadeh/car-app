@@ -39,12 +39,17 @@ export default function CarList() {
     fetchData();
   }, []);
 
+  const filteredCar= data.filter((car)=>{
+    return car.make.toLowerCase().includes(searchData.toLowerCase())
+  })
+
+
   
   return (
     <div className="container m-auto">
       <SearchBox onSearch={setSearchData}/>
       <div className="flex flex-wrap ">
-        {data.map((item) => (
+        {filteredCar.map((item) => (
           <CarCard key={item.id} car={item} />
         ))}
       </div>
