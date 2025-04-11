@@ -39,8 +39,13 @@ export default function CarCard({ car }: { car: carType }) {
 
       {isOpen && (
         <div className="fixed inset-0 bg-gray-300/75 z-50 flex items-center justify-center">
-          <button className="text-white bg-red-500 absolute top-10 p-3 rounded-full h-12 w-12 text-xl hover:cursor-pointer hover:bg-red-400" onClick={()=>setIsOpen(false)}>X</button>
-          <CarDetail car={car}/>
+          <button
+            className="text-white bg-red-500 absolute top-0 p-3 rounded-full h-12 w-12 text-xl shadow-2xl hover:cursor-pointer hover:bg-red-400 "
+            onClick={() => setIsOpen(false)}
+          >
+            X
+          </button>
+          <CarDetail car={car} />
         </div>
       )}
     </div>

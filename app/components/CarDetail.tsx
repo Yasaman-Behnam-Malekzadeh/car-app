@@ -11,8 +11,8 @@ interface carType {
 
 export default function CarDetail({ car }: { car: carType }) {
   return (
-    <div className="flex flex-col p-5 bg-white">
-        <img src="/car2.jpg" alt="car-detail" className="m-3 h-[180px]" />
+    <div className="flex flex-col p-5 bg-white shadow-2xl">
+        <img src="/car2.jpg" alt="car-detail" className="m-3 " />
       <span>
         Make:<strong>{car.make}</strong>
       </span>
