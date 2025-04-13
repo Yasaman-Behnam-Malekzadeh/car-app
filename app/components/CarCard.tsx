@@ -17,7 +17,7 @@ export default function CarCard({ car }: { car: carType }) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="car-detail flex flex-col rounded-sm bg-gray-100 border-0 h-[330px] w-[300px] ml-5 mb-5">
+    <div className="car-detail flex flex-col rounded-sm bg-gray-100 border-0 h-[330px] w-[300px] mb-5">
       <img src="/car2.jpg" alt="car-detail" className="m-3 h-[180px]" />
       <div className="flex flex-col mx-3">
         <span>

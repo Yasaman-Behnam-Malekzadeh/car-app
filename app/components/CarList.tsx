@@ -48,7 +48,7 @@ export default function CarList() {
   return (
     <div className="container m-auto">
       <SearchBox onSearch={setSearchData}/>
-      <div className="flex flex-wrap ">
+      <div className="flex flex-wrap justify-between">
         {filteredCar.map((item) => (
           <CarCard key={item.id} car={item} />
         ))}
