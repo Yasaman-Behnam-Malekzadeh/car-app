@@ -22,6 +22,7 @@ interface car {
 export default function CarList() {
   const [data, setData] = useState<car[]>([]);
   const [searchData, setSearchData] = useState<string>("");
+  const [selectedYear, setSelectedYear] = useState<string>("All cars");
 
   const [currentPage, setCurrentPage] = useState<number>(1);
   const itemPerPage = 12;
@@ -29,7 +30,12 @@ export default function CarList() {
   const indexOfFirstItem = indexOfLastItem - itemPerPage;
 
   const filteredCar = data.filter((car) => {
-    return car.make.toLowerCase().includes(searchData.toLowerCase());
+    const matchesSearch = car.make
+      .toLowerCase()
+      .includes(searchData.toLowerCase());
+    const matchesYear =
+      selectedYear === "All cars" || car.year === selectedYear;
+    return matchesSearch && matchesYear;
   });
 
   const currentItems = filteredCar.slice(indexOfFirstItem, indexOfLastItem);
@@ -56,13 +62,18 @@ export default function CarList() {
     setCurrentPage(pageNumber);
   };
 
-  const filteredYear = [...new Set(data.map((item) => item.year))];
+  const filteredYear = [
+    ...["All cars"],
+    ...[...new Set(data.map((item) => item.year))].sort(
+      (a, b) => Number(b) - Number(a)
+    ),
+  ];
 
   return (
     <div className="container m-auto">
       <div className="flex justify-between">
         <SearchBox onSearch={setSearchData} />
-        <SelectBox filteredYear={filteredYear}/>
+        <SelectBox filteredYear={filteredYear} onYear={setSelectedYear} />
       </div>
       <div className="flex flex-wrap ml-[-14px]">
         {currentItems.map((item) => (

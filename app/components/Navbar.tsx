@@ -5,7 +5,7 @@ export default function Navbar() {
       <div>
         <img src="/logo.svg" alt="logo" height={"50px"} width={"100px"}/>
       </div>
-      <div className="z-10">Sign in</div>
+      <div className="z-10"></div>
     </div>
   )
 }
