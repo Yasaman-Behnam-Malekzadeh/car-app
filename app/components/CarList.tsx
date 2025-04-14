@@ -71,8 +71,11 @@ export default function CarList() {
           totalItemsCount={filteredCar.length}
           pageRangeDisplayed={10}
           itemClass="mx-1"
+          activeLinkClass="rounded-lg !bg-blue-500 !text-white"
+         
           linkClass="px-3 py-1 rounded-lg bg-gray-100 hover:bg-blue-500 hover:text-white text-sm text-gray-800 transition-colors"
           innerClass="flex gap-2"
+          
         />
       </div>
     </div>
