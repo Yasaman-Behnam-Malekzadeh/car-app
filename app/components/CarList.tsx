@@ -23,7 +23,7 @@ export default function CarList() {
   const [searchData, setSearchData] = useState<string>("");
 
   const [currentPage, setCurrentPage] = useState<number>(1);
-  const itemPerPage = 10;
+  const itemPerPage = 12;
   const indexOfLastItem = currentPage * itemPerPage;
   const indexOfFirstItem = indexOfLastItem - itemPerPage;
 

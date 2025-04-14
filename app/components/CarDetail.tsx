@@ -56,7 +56,7 @@ export default function CarDetail({ car }: { car: carType }) {
   const imgUrl = carImage[key] || "/car2.jpg";
   return (
     <div className="flex flex-col p-5 bg-white shadow-2xl">
-      <img src={imgUrl} alt={key} className="m-3 " />
+      <img src={imgUrl} alt={key} className="m-3 w-5xl"  />
       <span>
         Make:<strong>{car.make}</strong>
       </span>

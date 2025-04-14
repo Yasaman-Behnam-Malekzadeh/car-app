@@ -17,7 +17,7 @@ export default function Hero() {
           alt="hero"
           className="relative z-10 object-contain"
         />
-        <img
+         <img
           src="/hero-bg.png"
           alt="hero-background"
           className="absolute z-0 top-[-120px]"
