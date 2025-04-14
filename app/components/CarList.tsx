@@ -23,7 +23,7 @@ export default function CarList() {
   const [searchData, setSearchData] = useState<string>("");
 
   const [currentPage, setCurrentPage] = useState<number>(1);
-  const itemPerPage = 8;
+  const itemPerPage = 10;
   const indexOfLastItem = currentPage * itemPerPage;
   const indexOfFirstItem = indexOfLastItem - itemPerPage;
 
@@ -58,7 +58,7 @@ export default function CarList() {
   return (
     <div className="container m-auto">
       <SearchBox onSearch={setSearchData} />
-      <div className="flex flex-wrap ml-[-22px]">
+      <div className="flex flex-wrap ml-[-14px]">
         {currentItems.map((item) => (
           <CarCard key={item.id} car={item} />
         ))}
@@ -69,7 +69,7 @@ export default function CarList() {
           onChange={handlePageChange}
           itemsCountPerPage={itemPerPage}
           totalItemsCount={filteredCar.length}
-          pageRangeDisplayed={8}
+          pageRangeDisplayed={10}
           itemClass="mx-1"
           linkClass="px-3 py-1 rounded-lg bg-gray-100 hover:bg-blue-500 hover:text-white text-sm text-gray-800 transition-colors"
           innerClass="flex gap-2"
