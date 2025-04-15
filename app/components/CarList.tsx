@@ -71,6 +71,10 @@ export default function CarList() {
 
   return (
     <div className="container m-auto">
+      <div className="mb-5">
+        <h1 className="text-4xl font-bold">Car Catalogue</h1>
+        <small>Explore the car you might like</small>
+      </div>
       <div className="flex justify-between">
         <SearchBox onSearch={setSearchData} />
         <SelectBox filteredYear={filteredYear} onYear={setSelectedYear} />
