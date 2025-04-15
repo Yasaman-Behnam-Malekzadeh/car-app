@@ -61,7 +61,7 @@ export default function CarCard({ car }: { car: carType }) {
   const imgUrl = carImage[key] || "/car2.jpg";
 
   return (
-    <div className="car-detail flex flex-col rounded-sm bg-gray-100 border-0 w-60  ml-3 mb-5">
+    <div className="car-card flex flex-col rounded-sm bg-gray-100 border-0 w-60  ml-3 mb-5">
       <img src={imgUrl} alt={key} className="m-3 h-[200px] w-[220px]" />
       <div className="flex flex-col mx-3">
         <span>
