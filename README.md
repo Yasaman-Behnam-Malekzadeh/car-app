@@ -26,10 +26,12 @@ This is a responsive car app which I got the data from a free API and I added th
 
 ## 🔧 Test
 
-To run test
+to run test
 
 ```bash 
 npx playwright test
+```
+
 
 ---
 
@@ -39,4 +41,5 @@ To run the project locally:
 
 ```bash
 npm run dev
+```
 
